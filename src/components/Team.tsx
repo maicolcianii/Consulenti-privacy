@@ -31,10 +31,14 @@ export function Team() {
                   <div className="absolute inset-0 bg-gray-100 z-0 flex items-center justify-center">
                     <span className="font-medium text-gray-400 absolute text-sm">Foto {member.name.split(' ')[1]}</span>
                     <img 
-                      src={`/team/${member.id}.webp`} 
+                      src={`/team/${member.id}.png`} 
                       alt={member.name} 
-                      className="relative w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 transition-all duration-500 z-10" 
+                      className="relative w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-500 z-10" 
                       onError={(e) => { 
+                        if (e.currentTarget.src.includes('.png')) {
+                          e.currentTarget.src = `/team/${member.id}.webp`;
+                          return;
+                        }
                         if (e.currentTarget.src.includes('.webp')) {
                           e.currentTarget.src = `/team/${member.id}.jpg`;
                           return;

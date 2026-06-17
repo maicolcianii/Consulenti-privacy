@@ -4,7 +4,7 @@ import { Container } from './ui/LayoutBlocks';
 
 export function Topbar() {
   return (
-    <div className="bg-brand-purple text-white py-2.5 border-b border-white/10 sticky top-0 z-[60] text-sm">
+    <div className="bg-brand-purple text-white py-2.5 border-b border-white/10 relative z-[60] text-sm">
       <Container className="flex flex-col sm:flex-row items-center justify-center text-center gap-2">
         <div className="flex items-center gap-2">
           <ShieldAlert size={16} className="text-brand-purple-light animate-pulse" />

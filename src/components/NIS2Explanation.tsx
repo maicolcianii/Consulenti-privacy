@@ -122,8 +122,8 @@ export function NIS2Explanation() {
         </div>
 
         {/* Timeline */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold mb-8">La timeline delle scadenze</h3>
+        <div className="mb-12 mt-12 md:mt-16">
+          <h3 className="text-2xl font-bold mb-16">La timeline delle scadenze</h3>
           <div className="relative">
             <div className="absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2 hidden md:block z-0"></div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">

@@ -19,10 +19,12 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white font-sans overflow-x-hidden selection:bg-brand-purple-light selection:text-white">
-      <Topbar />
-      <Header />
+      <div className="fixed w-full top-0 z-[100] flex flex-col">
+        <Topbar />
+        <Header />
+      </div>
       
-      <main>
+      <main className="pt-[120px]">
         <Hero onOpenGuide={() => setGuideModalOpen(true)} />
         <Paths onOpenGuide={() => setGuideModalOpen(true)} />
         <NIS2Explanation />
