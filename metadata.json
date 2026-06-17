@@ -1,0 +1,6 @@
+{
+  "name": "Adeguamento NIS2",
+  "description": "Una landing page ad alta conversione per consulenze e Assessment sulla Direttiva NIS2",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
