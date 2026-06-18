@@ -126,31 +126,31 @@ export function NIS2Explanation() {
           <h3 className="text-2xl font-bold mb-16">La timeline delle scadenze</h3>
           <div className="relative">
             <div className="absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2 hidden md:block z-0"></div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
+            <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-4 gap-6 relative z-10 pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
               
               {/* Step 1 */}
-              <div className="bg-white border border-gray-200 p-5 rounded-xl relative">
+              <div className="min-w-[85%] sm:min-w-[280px] md:min-w-0 snap-center shrink-0 bg-white border border-gray-200 p-5 rounded-xl relative">
                 <div className="md:absolute top-[-44px] left-1/2 md:-translate-x-1/2 w-4 h-4 bg-white border-4 border-gray-300 rounded-full hidden md:block"></div>
                 <div className="text-sm font-bold text-gray-500 mb-1">Gennaio 2026</div>
                 <div className="font-medium text-brand-black">Notifica incidenti al CSIRT locale</div>
               </div>
 
               {/* Step 2 */}
-              <div className="bg-white border border-gray-200 p-5 rounded-xl relative">
+              <div className="min-w-[85%] sm:min-w-[280px] md:min-w-0 snap-center shrink-0 bg-white border border-gray-200 p-5 rounded-xl relative">
                 <div className="md:absolute top-[-44px] left-1/2 md:-translate-x-1/2 w-4 h-4 bg-white border-4 border-gray-300 rounded-full hidden md:block"></div>
                 <div className="text-sm font-bold text-gray-500 mb-1">28 Febbraio 2026</div>
                 <div className="font-medium text-brand-black">Registrazione sul Portale ACN</div>
               </div>
 
               {/* Step 3 */}
-              <div className="bg-white border border-gray-200 p-5 rounded-xl relative">
+              <div className="min-w-[85%] sm:min-w-[280px] md:min-w-0 snap-center shrink-0 bg-white border border-gray-200 p-5 rounded-xl relative">
                 <div className="md:absolute top-[-44px] left-1/2 md:-translate-x-1/2 w-4 h-4 bg-white border-4 border-gray-300 rounded-full hidden md:block"></div>
                 <div className="text-sm font-bold text-gray-500 mb-1">31 Maggio 2026</div>
                 <div className="font-medium text-brand-black">Comunicazione attività e servizi forniti</div>
               </div>
 
               {/* Step 4 - Highlighted */}
-              <div className="bg-brand-purple border border-brand-purple p-5 rounded-xl relative text-white shadow-lg transform md:-translate-y-2">
+              <div className="min-w-[85%] sm:min-w-[280px] md:min-w-0 snap-center shrink-0 bg-brand-purple border border-brand-purple p-5 rounded-xl relative text-white shadow-lg transform md:-translate-y-2">
                 <div className="md:absolute top-[-36px] left-1/2 md:-translate-x-1/2 w-6 h-6 bg-brand-purple border-4 border-brand-purple-light rounded-full hidden md:block"></div>
                 <div className="text-sm font-bold text-brand-purple-light mb-1">31 Ottobre 2026</div>
                 <div className="font-medium text-white mb-2">Misure base operative</div>

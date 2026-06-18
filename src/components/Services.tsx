@@ -14,7 +14,7 @@ export function Services() {
         </div>
 
         {/* The 4 Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-16 relative">
+        <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-4 gap-4 mb-16 relative pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
           <div className="hidden md:block absolute top-[28px] left-[10%] right-[10%] h-[2px] bg-brand-purple/10 z-0"></div>
           
           {[
@@ -23,7 +23,7 @@ export function Services() {
             "Adeguamento organizzativo (policy e formazione)",
             "Audit fornitori e mantenimento nel tempo"
           ].map((title, i) => (
-             <div key={i} className="bg-white p-5 rounded-2xl border border-brand-border relative z-10 text-center shadow-sm hover:shadow-md transition-shadow">
+             <div key={i} className="min-w-[85%] sm:min-w-[250px] md:min-w-0 snap-center shrink-0 bg-white p-5 rounded-2xl border border-brand-border relative z-10 text-center shadow-sm hover:shadow-md transition-shadow">
                <div className="w-14 h-14 bg-brand-purple text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4 border-4 border-white shadow-sm">
                  {i + 1}
                </div>

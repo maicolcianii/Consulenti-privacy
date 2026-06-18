@@ -24,7 +24,7 @@ export default function App() {
         <Header />
       </div>
       
-      <main className="pt-[120px]">
+      <main>
         <Hero onOpenGuide={() => setGuideModalOpen(true)} />
         <Paths onOpenGuide={() => setGuideModalOpen(true)} />
         <NIS2Explanation />
@@ -43,16 +43,6 @@ export default function App() {
         isOpen={guideModalOpen} 
         onClose={() => setGuideModalOpen(false)} 
       />
-
-      {/* Mobile Sticky CTA */}
-      <div className="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-brand-border p-3 z-40 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
-        <button 
-          onClick={() => { document.getElementById('contatti')?.scrollIntoView({ behavior: 'smooth' }); document.getElementById('nome-finale')?.focus(); }}
-          className="flex items-center justify-center w-full bg-brand-purple text-white py-3 rounded-full font-medium"
-        >
-          Parla con un esperto
-        </button>
-      </div>
     </div>
   );
 }

@@ -20,9 +20,9 @@ export function Team() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
+        <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
           {visibleMembers.map((member, i) => (
-            <div key={i} className="group flip-card h-[380px] w-full cursor-pointer">
+            <div key={i} className="min-w-[85%] sm:min-w-[300px] md:min-w-0 shrink-0 snap-center group flip-card h-[380px] w-full cursor-pointer">
               <div className="flip-card-inner relative w-full h-full rounded-[20px] shadow-sm group-hover:shadow-xl transition-all">
                 
                 {/* Front Side */}

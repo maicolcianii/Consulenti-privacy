@@ -9,10 +9,12 @@ type Answer = "Sì" | "No" | "Non so" | null;
 export function Hero({ onOpenGuide }: { onOpenGuide: () => void }) {
   const [step, setStep] = useState(1);
   const [answers, setAnswers] = useState({ d1: null as Answer, d2: null as Answer, d3: null as Answer, d4: null as Answer });
+  const [showSectors, setShowSectors] = useState(false);
 
   useEffect(() => {
     const handleReset = () => {
       setStep(1);
+      setShowSectors(false);
       setAnswers({ d1: null, d2: null, d3: null, d4: null });
     };
     window.addEventListener('reset-quiz', handleReset);
@@ -51,7 +53,7 @@ export function Hero({ onOpenGuide }: { onOpenGuide: () => void }) {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-brand-purple via-brand-purple-mid to-brand-purple-light overflow-hidden pt-8 pb-16 md:pt-16 md:pb-24">
+    <section className="relative bg-gradient-to-br from-brand-purple via-brand-purple-mid to-brand-purple-light overflow-hidden pt-[116px] pb-16 md:pt-[130px] md:pb-24">
       {/* Background graphic */}
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none flex items-center justify-center">
         <svg viewBox="0 0 800 800" className="w-[120%] h-auto max-w-[800px] stroke-white" fill="none" strokeWidth="2">
@@ -111,12 +113,32 @@ export function Hero({ onOpenGuide }: { onOpenGuide: () => void }) {
 
                     <div className="text-brand-purple-light font-bold text-xs uppercase tracking-wider mb-2">Verifica in 1 minuto (Domanda {step}/4)</div>
                     
-                    <h3 className="text-xl font-bold mb-6 text-brand-black min-h-[60px]">
-                      {step === 1 && "Il tuo settore rientra tra quelli regolati (energia, digitale, sanità, logistica, ecc.)?"}
+                    <h3 className="text-xl font-bold mb-4 text-brand-black min-h-[60px]">
+                      {step === 1 && (
+                        <div>
+                          Il tuo settore rientra tra quelli regolati (energia, digitale, sanità, logistica, ecc.)?
+                          <button onClick={() => setShowSectors(!showSectors)} className="block text-sm font-medium text-brand-purple mt-2 underline hover:text-brand-purple-mid transition-colors text-left">
+                            Quali sono i settori regolati?
+                          </button>
+                        </div>
+                      )}
                       {step === 2 && "La tua azienda ha più di 50 dipendenti?"}
                       {step === 3 && "Il fatturato o il bilancio annuo supera i 10 milioni di euro?"}
                       {step === 4 && "Sei fornitore di un'azienda che rientra nella NIS2?"}
                     </h3>
+
+                    {step === 1 && showSectors && (
+                      <div className="bg-brand-tint border border-brand-purple-light p-4 rounded-xl mb-6 text-sm text-gray-700 animate-in fade-in zoom-in-95 duration-200">
+                        <p className="font-semibold text-brand-purple mb-2">Settori critici:</p>
+                        <ul className="list-disc pl-4 space-y-1 text-xs">
+                          <li>Energia, Trasporti, Banche/Finanza</li>
+                          <li>Sanità, Acqua, Servizi TIC (B2B)</li>
+                          <li>Spazio, PA, Rifiuti, Chimica</li>
+                          <li>Alimentare, Fabbricazione, Ricerca</li>
+                          <li>Servizi postali e di corriere</li>
+                        </ul>
+                      </div>
+                    )}
 
                     <div className="flex flex-col gap-3">
                       <button onClick={() => handleAnswer(`d${step}` as keyof typeof answers, "Sì")} className="py-3.5 px-6 rounded-xl border border-gray-200 hover:border-brand-purple hover:bg-purple-50 hover:text-brand-purple font-medium transition-all text-left">Sì</button>
@@ -145,7 +167,7 @@ export function Hero({ onOpenGuide }: { onOpenGuide: () => void }) {
                     />
 
                     <div className="flex justify-between items-center text-sm mt-4 border-t border-gray-100 pt-4">
-                      <button onClick={() => { setStep(1); setAnswers({d1:null, d2:null, d3:null, d4:null}); }} className="flex items-center gap-1 text-gray-500 hover:text-brand-purple transition-colors shrink-0">
+                      <button onClick={() => { setStep(1); setShowSectors(false); setAnswers({d1:null, d2:null, d3:null, d4:null}); }} className="flex items-center gap-1 text-gray-500 hover:text-brand-purple transition-colors shrink-0">
                         <RotateCcw size={14} /> Rifai il test
                       </button>
                       <p className="text-[10px] text-gray-400 max-w-[65%] text-right leading-[1.2]">Il risultato è puramente indicativo e non sostituisce una valutazione professionale della reale applicabilità della Direttiva NIS2.</p>

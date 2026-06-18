@@ -28,9 +28,9 @@ export function Sectors() {
             <h3 className="text-2xl font-bold text-brand-purple mb-6 pb-2 border-b-2 border-brand-purple-light inline-block">
               Settori ad Alta Criticità (Soggetti Essenziali)
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-4 lg:grid-cols-5 gap-4 pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
               {SECTORS_ESSENTIAL.map((sector, i) => (
-                <div key={i} className="bg-white p-5 rounded-[14px] border border-brand-border text-center flex flex-col items-center justify-center gap-3 hover:border-brand-purple-light hover:shadow-md transition-all group">
+                <div key={i} className="min-w-[140px] sm:min-w-[160px] md:min-w-0 snap-center shrink-0 bg-white p-5 rounded-[14px] border border-brand-border text-center flex flex-col items-center justify-center gap-3 hover:border-brand-purple-light hover:shadow-md transition-all group">
                   <div className="w-12 h-12 rounded-full bg-brand-tint flex items-center justify-center group-hover:bg-purple-50 transition-colors">
                     {renderIcon(sector.icon)}
                   </div>
@@ -45,9 +45,9 @@ export function Sectors() {
             <h3 className="text-2xl font-bold text-brand-purple mb-6 pb-2 border-b-2 border-brand-purple-light inline-block">
               Altri Settori Critici (Soggetti Importanti)
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-4 gap-4 pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
               {SECTORS_IMPORTANT.map((sector, i) => (
-                <div key={i} className="bg-white p-5 rounded-[14px] border border-brand-border text-center flex flex-col items-center justify-center gap-3 hover:border-brand-purple-light hover:shadow-md transition-all group">
+                <div key={i} className="min-w-[140px] sm:min-w-[160px] md:min-w-0 snap-center shrink-0 bg-white p-5 rounded-[14px] border border-brand-border text-center flex flex-col items-center justify-center gap-3 hover:border-brand-purple-light hover:shadow-md transition-all group">
                   <div className="w-12 h-12 rounded-full bg-brand-tint flex items-center justify-center group-hover:bg-purple-50 transition-colors">
                     {renderIcon(sector.icon)}
                   </div>
