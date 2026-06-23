@@ -34,7 +34,7 @@ function Countdown() {
   return (
     <div className="bg-gradient-to-r from-brand-purple to-brand-purple-mid text-white rounded-[16px] p-6 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
       <div className="max-w-md">
-        <h4 className="text-xl font-bold mb-2">Tempo rimanente per completare l'adeguamento</h4>
+        <h4 className="text-xl font-bold mb-2">Tempo rimanente per adeguarti alla normativa</h4>
         <p className="text-sm opacity-80 text-purple-100">Il percorso richiede mediamente diverse settimane: ogni mese senza azioni conta e aumenta il rischio.</p>
       </div>
       <div className="flex gap-4">
@@ -132,7 +132,7 @@ export function NIS2Explanation() {
               <div className="min-w-[85%] sm:min-w-[280px] md:min-w-0 snap-center shrink-0 bg-white border border-gray-200 p-5 rounded-xl relative">
                 <div className="md:absolute top-[-44px] left-1/2 md:-translate-x-1/2 w-4 h-4 bg-white border-4 border-gray-300 rounded-full hidden md:block"></div>
                 <div className="text-sm font-bold text-gray-500 mb-1">Gennaio 2026</div>
-                <div className="font-medium text-brand-black">Notifica incidenti al CSIRT locale</div>
+                <div className="font-medium text-brand-black">Designazione del referente CSIRT e del punto di contatto</div>
               </div>
 
               {/* Step 2 */}

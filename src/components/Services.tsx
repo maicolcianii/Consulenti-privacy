@@ -18,8 +18,8 @@ export function Services() {
           <div className="hidden md:block absolute top-[28px] left-[10%] right-[10%] h-[2px] bg-brand-purple/10 z-0"></div>
           
           {[
-            "Autovalutazione e gap analysis",
-            "Cybersecurity Assessment ®",
+            "Autovalutazione e analisi legale",
+            "Sinergia con Partner IT",
             "Adeguamento organizzativo (policy e formazione)",
             "Audit fornitori e mantenimento nel tempo"
           ].map((title, i) => (
@@ -42,7 +42,7 @@ export function Services() {
             </h3>
             <ul className="space-y-4 mb-8">
               {[
-                "Analisi di applicabilità formale e Gap Analysis rispetto alla direttiva",
+                "Analisi di applicabilità formale e inquadramento normativo",
                 "Redazione procedure operative per la gestione e notifica incidenti",
                 "Stesura policy aziendali, governance e formazione del personale",
                 "Audit e protocolli per la sicurezza dei fornitori strategici"
@@ -61,16 +61,16 @@ export function Services() {
               <ShieldCheck size={120} />
             </div>
             <h3 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3 text-brand-purple relative z-10">
-              <ShieldCheck className="text-brand-purple-light" /> Cybersecurity Assessment ®
+              <ShieldCheck className="text-brand-purple-light" /> Supporto Tecnico (IT Partner)
             </h3>
             <p className="text-gray-600 mb-6 leading-relaxed relative z-10">
-              Valuta lo stato della sicurezza informatica, identifica le vulnerabilità critiche e fornisce raccomandazioni strategiche chiare. <strong>Nessun falso allarme:</strong> un'analisi organizzativa ispirata agli standard <strong>ISO/IEC 27001, NIST CSF e NIS2</strong>, senza test tecnici intrusivi che bloccano la produzione e nessun vulnerability scan automatico venduto per analisi approfondita.
+              Gli aspetti puramente tecnici (quali gap analysis IT e vulnerability assessment) non sono svolti da noi, ma <strong>dal Partner IT scelto dall'azienda</strong>. Lavoriamo in affiancamento per garantirti la totale conformità senza sovrapposizioni.
             </p>
             <ul className="space-y-4 relative z-10">
               {[
-                "Audit strutturato approfondito con intervista al personale IT",
-                "Report dettagliato di vulnerabilità e aree di miglioramento",
-                "Colloquio restitutivo sui risultati per pianificare le ottimizzazioni mirate"
+                "Nessuna sovrapposizione con il tuo fornitore IT di fiducia",
+                "Traduzione dei requisiti legali in obiettivi tecnici chiari per l'IT",
+                "Supervisione della documentazione tecnica per la compliance normativa"
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-700">
                   <CheckCircle2 size={20} className="text-brand-purple shrink-0 mt-0.5" />

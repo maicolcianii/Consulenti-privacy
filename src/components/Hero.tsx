@@ -70,13 +70,13 @@ export function Hero({ onOpenGuide }: { onOpenGuide: () => void }) {
           {/* Copy Side */}
           <div className="w-full lg:w-1/2 text-white">
             <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-              ADEGUAMENTO NIS2 & CYBERSECURITY ASSESSMENT
+              ADEGUAMENTO ALLA DIRETTIVA NIS2
             </span>
             <h1 className="text-4xl md:text-[50px] font-extrabold leading-[1.1] tracking-tight mb-6">
               Adegua la tua azienda alla <span className="text-brand-purple-light">NIS2 entro il 31 ottobre 2026</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light mb-8 max-w-xl">
-              Esperti legali e informatici ti affiancano nell'adeguamento alla Direttiva NIS2 e nel Cybersecurity Assessment, dall'analisi al mantenimento della conformità.
+              Esperti legali e informatici ti affiancano nell'adeguamento alla Direttiva NIS2, dall'analisi al mantenimento della conformità.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -116,9 +116,9 @@ export function Hero({ onOpenGuide }: { onOpenGuide: () => void }) {
                     <h3 className="text-xl font-bold mb-4 text-brand-black min-h-[60px]">
                       {step === 1 && (
                         <div>
-                          Il tuo settore rientra tra quelli regolati (energia, digitale, sanità, logistica, ecc.)?
+                          L'azienda rientra tra i soggetti importanti o essenziali?
                           <button onClick={() => setShowSectors(!showSectors)} className="block text-sm font-medium text-brand-purple mt-2 underline hover:text-brand-purple-mid transition-colors text-left">
-                            Quali sono i settori regolati?
+                            Quali sono i soggetti importanti o essenziali?
                           </button>
                         </div>
                       )}

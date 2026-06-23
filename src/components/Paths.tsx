@@ -55,11 +55,11 @@ export function Paths({ onOpenGuide }: { onOpenGuide: () => void }) {
               <div className="w-12 h-12 bg-purple-50 text-brand-purple rounded-xl flex items-center justify-center mb-6">
                 <Activity size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-3">Valutare la sicurezza</h3>
-              <p className="text-gray-600 mb-8 leading-relaxed">Misura lo stato della tua sicurezza informatica e procedurale con il Cybersecurity Assessment ®.</p>
+              <h3 className="text-xl font-bold mb-3">Allineamento legale</h3>
+              <p className="text-gray-600 mb-8 leading-relaxed">Allinea l'organizzazione con un programma completo di procedure, policy aziendali e formazione.</p>
             </div>
             <Button variant="secondary" as="a" href="#servizi" className="w-full relative z-10 mt-auto">
-              Scopri l'Assessment
+              Scopri i servizi
             </Button>
           </div>
 
